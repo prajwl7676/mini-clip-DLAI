@@ -1,0 +1,22 @@
+# mini-clip-dlai — Python dependencies
+# Install with: pip install -r requirements.txt
+ 
+torch==2.5.1          
+torchvision==0.20.1    
+ 
+ 
+transformers==4.48.0   
+datasets==3.2.0        
+ 
+
+Pillow==10.4.0         
+ 
+
+numpy==1.26.4          
+ 
+
+matplotlib==3.9.2      
+ 
+
+tqdm==4.66.6           
+scikit-learn==1.5.2    

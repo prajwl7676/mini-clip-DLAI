@@ -1,0 +1,87 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+*.egg-link
+.installed.cfg
+
+# ── Virtual environments ─────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ── Jupyter / Colab notebooks ────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Model checkpoints & weights ─────────────────────────
+# (large binary files — store on Google Drive, not GitHub)
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# ── Dataset files ────────────────────────────────────────
+# (download via HuggingFace at runtime, don't commit raw data)
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+*.arrow
+*.zip
+*.tar
+*.tar.gz
+
+# ── Images ───────────────────────────────────────────────
+# (keep only small example images in assets/, not raw dataset)
+*.jpg
+*.jpeg
+*.png
+*.gif
+!assets/*.png
+!assets/*.jpg
+
+# ── Logs & experiment outputs ────────────────────────────
+logs/
+runs/
+wandb/
+mlruns/
+outputs/
+results/
+*.log
+
+# ── OS & editor files ────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── HuggingFace cache ────────────────────────────────────
+.cache/
+~/.cache/huggingface/
+
+# ── Secrets ──────────────────────────────────────────────
+.env
+secrets.json
+*_secret*
+*_key*
