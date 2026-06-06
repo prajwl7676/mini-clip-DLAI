@@ -52,12 +52,20 @@ class TextEncoder(nn.Module):
         self,
         embedding_dim: int = 256,
         model_name: str = "distilbert-base-uncased",
+        freeze_layers: bool = True,
     ):
         super().__init__()
         self.bert = DistilBertModel.from_pretrained(model_name)
 
-        for param in self.bert.parameters():
-            param.requires_grad = False
+        if freeze_layers:
+            # 1. Freeze early transformer layers (0 and 1 out of 6)
+            for layer in self.bert.transformer.layer[:2]:
+                for param in layer.parameters():
+                    param.requires_grad = False
+
+            # 2. Also freeze the heavy text embeddings lookup table
+            for param in self.bert.embeddings.parameters():
+                param.requires_grad = False
 
         self.projection = nn.Sequential(
             nn.Linear(768, embedding_dim, bias=False),
