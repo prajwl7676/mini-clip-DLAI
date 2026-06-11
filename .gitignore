@@ -57,6 +57,7 @@ datasets/
 *.gif
 !assets/*.png
 !assets/*.jpg
+!notebook_outputs_pdf/ablation_result_img/*.png
 
 # ── Logs & experiment outputs ────────────────────────────
 logs/
