@@ -107,6 +107,19 @@ The **Baseline** represents frozen pretrained encoders with randomly initialized
 | **R@5** | Image $\rightarrow$ Text | 0.40% | 41.20% | +40.80% |
 | **R@10** | Image $\rightarrow$ Text | 1.20% | 54.80% | +53.60% |
 
+
+### Batch Size Ablation Study
+
+An ablation study was conducted across batch sizes $B \in \{32, 64, 128\}$ using a shortened 8-epoch training schedule to evaluate performance scaling. All metrics below reflect performance at the best validation epoch for each respective configuration.
+
+#### Batch Size Performance Table
+
+| Batch Size ($B$) | Direction | R@1 | R@5 | R@10 | Best Epoch | Train Loss | Val Loss |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **32** | Text $\rightarrow$ Image <br> Image $\rightarrow$ Text | 20.00% <br> 18.60% | 45.80% <br> 46.60% | 59.30% <br> 61.50% | 7 | 0.1490 | 1.1798 |
+| **64** | Text $\rightarrow$ Image <br> Image $\rightarrow$ Text | **21.10%** <br> **21.60%** | **48.20%** <br> **50.00%** | **61.70%** <br> **62.80%** | 7 | **0.1838** | **1.4761** |
+| **128** | Text $\rightarrow$ Image <br> Image $\rightarrow$ Text | 21.80% <br> 21.20% | 46.90% <br> 49.80% | 62.80% <br> 62.30% | 8 | 0.2733 | 1.8598 |
+
 ### Visualizations
 
 #### 1. Retrieval Performance Comparison
